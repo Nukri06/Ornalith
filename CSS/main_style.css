@@ -98,7 +98,7 @@ body {
 /* ================== მთავარი ჰერო და ლოგო ================== */
 .hero-section {
     background-color: #2A1B1A; /* ჰედერზე ოდნავ მუქი ფერი */
-    background-image: url('../Assets/tbilisi-history.jpg');
+    background-image: url('../Assets/BackgroundMain.png') , linear-gradient(rgba(31, 14, 14, 0.696), rgba(0, 0, 0, 0.715));
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
