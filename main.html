@@ -3,266 +3,320 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ORNALITH - ვირტუალური მუზეუმი</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Serif+Georgian:wght@400;700&family=Playfair+Display:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="CSS/main_style.css" />
+    <title>ORNALITH | ისტორიული ჟურნალი</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <script src="JS/main_script.js"></script>
+    <link rel="stylesheet" href="./CSS/main_style.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="container nav-container">
-        <a href="#" class="logo">ORNALITH</a>
-
-        <ul class="nav-links">
-          <li><a href="#hero">მთავარი</a></li>
-          <li class="dropdown">
-            <a href="#culture" class="dropbtn"
-              >კულტურა <i class="fas fa-caret-down"></i
-            ></a>
-            <div class="dropdown-content">
-              <a href="#">არქიტექტურა</a>
-              <a href="#">სამზარეულო</a>
-              <a href="#">ორნამენტები</a>
-            </div>
-          </li>
-          <li><a href="#blog">ბლოგი</a></li>
-          <li><a href="#about">ჩვენ შესახებ</a></li>
-          <li><a href="#qa">Q&A</a></li>
-        </ul>
-
-        <div class="auth-buttons">
-          <a href="#" class="btn-login">შესვლა</a>
-          <a href="#" class="btn-register">რეგისტრაცია</a>
+    <div class="top-bar">
+      <div class="container">
+        <div class="social-icons">
+          <i
+            class="fab fa-facebook-f"
+            style="margin-right: 15px; cursor: pointer"
+          ></i>
+          <i
+            class="fab fa-twitter"
+            style="margin-right: 15px; cursor: pointer"
+          ></i>
+          <i class="fab fa-instagram" style="cursor: pointer"></i>
         </div>
-
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <div class="top-bar-links">
+          <a href="#">ჩემი ანგარიში</a>
+          <a href="#">შემოწირულობა</a>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="ძიება..." />
+          <i class="fas fa-search"></i>
         </div>
       </div>
-    </nav>
+    </div>
 
-    <header class="hero" id="hero">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <h1 class="english-title">Discover the Legacy</h1>
-        <h2 class="geo-title">საქართველოს ციფრული საგანძური</h2>
-        <p>ვირტუალური მოგზაურობა ისტორიაში, კულტურასა და ხელოვნებაში.</p>
-        <div class="hero-btns">
-          <button class="btn-primary" id="api-trigger">
-            დღის აღმოჩენა (API)
-          </button>
-          <button class="btn-secondary">რუკაზე ნახვა</button>
-        </div>
-        <div id="api-result" class="api-box hidden"></div>
-      </div>
+    <header class="hero-section">
+      <img src="./Assets/Logo.png" alt="Logo" class="main-logo-img" />
+      <p class="hero-subtitle">ისტორიისა და იდეების ჟურნალი</p>
+      <a href="#donate" class="donate-btn-large">შემოწირულობა</a>
     </header>
 
-    <section class="about section-padding" id="about">
-      <div class="container about-grid">
-        <div class="about-text">
-          <h3 class="section-title">მისია და ხედვა</h3>
-          <p>
-            Ornalith არ არის უბრალოდ მუზეუმი, ეს არის ციფრული კარიბჭე წარსულში.
-            ჩვენი მიზანია შევაგროვოთ და გავაცოცხლოთ მივიწყებული ისტორიები,
-            ორნამენტების სიმბოლიკა და კულტურული მემკვიდრეობა.
-          </p>
-          <p>აქ ნივთები არ დევს ვიტრინებში — აქ ისინი ყვებიან ისტორიებს.</p>
-        </div>
-        <div class="about-image">
-          <div class="placeholder-img">Ornalith Concept Art</div>
-        </div>
-      </div>
-    </section>
+    <nav class="main-nav">
+      <a href="#about">ჩვენ შესახებ</a>
+      <a href="#magazine">ჟურნალი</a>
+      <a href="#blogs">ბლოგები</a>
+      <a href="#store">მაღაზია</a>
+      <a href="#podcast">პოდკასტი</a>
+      <a href="#donate">დონაცია</a>
+      <a href="#events">ღონისძიებები</a>
+    </nav>
 
-    <section class="culture section-padding" id="culture">
+    <main>
       <div class="container">
-        <h3 class="section-title center">კულტურული მოზაიკა</h3>
-        <div class="culture-grid">
-          <div class="culture-card">
-            <div class="card-icon"><i class="fas fa-dungeon"></i></div>
-            <h4>ნაგებობები</h4>
-            <p>ქართული ხუროთმოძღვრების ძეგლები და მათი საიდუმლოებები.</p>
-            <a href="#" class="read-more">დათვალიერება &rarr;</a>
-          </div>
-          <div class="culture-card">
-            <div class="card-icon"><i class="fas fa-utensils"></i></div>
-            <h4>სამზარეულო</h4>
-            <p>გასტრონომიული ისტორია და ტრადიციული რეცეპტები.</p>
-            <a href="#" class="read-more">დათვალიერება &rarr;</a>
-          </div>
-          <div class="culture-card">
-            <div class="card-icon"><i class="fas fa-gem"></i></div>
-            <h4>ორნამენტები</h4>
-            <p>ფრესკები, ჩუქურთმები და უძველესი სიმბოლიკა.</p>
-            <a href="#" class="read-more">დათვალიერება &rarr;</a>
-          </div>
+        <div class="section-header" id="magazine">
+          <h2>
+            ORNALITH
+            <i class="fas fa-coins" style="color: var(--clr-gold-1)"></i> DAILY
+          </h2>
         </div>
-      </div>
-    </section>
+        <div class="newsletter-bar">
+          <div class="newsletter-text">
+            <strong>იყავი საქმის კურსში</strong>
+            <span>გამოიწერე სიახლეები</span>
+          </div>
+          <form class="newsletter-form">
+            <input type="email" placeholder="ელ-ფოსტა" required />
+            <button type="submit">+</button>
+          </form>
+        </div>
+        <article class="featured-article">
+          <img
+            src="https://via.placeholder.com/600x500/2E1F1E/F2EBE5?text=თანამედროვე+გამოფენა"
+            alt="Featured Article"
+          />
 
-    <section class="featured section-padding">
-      <div class="container featured-container">
-        <div class="featured-img">
-          <div class="placeholder-img">Featured Artifact</div>
-        </div>
-        <div class="featured-content">
-          <span class="tag">თვის აღმოჩენა</span>
-          <h3>ვანის ქურუმი</h3>
-          <p>
-            აღმოაჩინეთ კოლხური ოქრომჭედლობის ეს უნიკალური ნიმუში. რა ისტორიას
-            მალავს მისი სამოსი და რა რიტუალებს ასრულებდა ის?
-          </p>
-          <a href="#" class="btn-primary">სრული ისტორია</a>
-        </div>
-      </div>
-    </section>
+          <div class="article-content">
+            <span class="article-category"
+              ><i class="fas fa-book-open"></i> თანამედროვე კულტურა</span
+            >
+            <h3>მეხსიერების რესტავრაცია: არტი მიტოვებულ სივრცეებში</h3>
+            <p class="article-author">ავტორი: ელენე მელიქიშვილი</p>
+            <p class="article-excerpt">
+              როგორ აქცევენ ქართველი არტისტები მიტოვებულ ინდუსტრიულ ზონებს
+              კულტურულ ჰაბებად. ახალი მულტიმედიური გამოფენა „ექო“, რომელიც
+              ყოფილი აბრეშუმის ქარხნის კედლებში გაიხსნა, წარსულისა და მომავლის
+              უწყვეტ დიალოგს გვთავაზობს...
+            </p>
+            <a href="#" class="read-more">სრულად წაკითხვა</a>
+          </div>
+        </article>
 
-    <section class="blog section-padding" id="blog">
-      <div class="container">
-        <h3 class="section-title center">ბლოგი და სიახლეები</h3>
+        <div class="section-header" id="blogs">
+          <h2>ბოლო ჩანაწერები</h2>
+        </div>
         <div class="blog-grid">
-          <article class="blog-post">
-            <div class="post-img"></div>
-            <div class="post-content">
-              <span class="post-date">17 თებერვალი, 2024</span>
-              <h4>ახალი არქეოლოგიური აღმოჩენა</h4>
-              <p>გრაკლიან გორაზე აღმოჩენილი ახალი წარწერის მნიშვნელობა...</p>
-              <div class="post-footer">
-                <span
-                  >ავტორი:
-                  <i class="fas fa-check-circle verified"></i> Admin</span
-                >
-              </div>
-            </div>
-          </article>
-          <article class="blog-post">
-            <div class="post-img"></div>
-            <div class="post-content">
-              <span class="post-date">15 თებერვალი, 2024</span>
-              <h4>სვანური კოშკების საიდუმლო</h4>
-              <p>
-                რატომ აშენებდნენ კოშკებს და რა ფუნქცია ჰქონდა მათ თავდაცვის
-                გარდა?
-              </p>
-              <div class="post-footer">
-                <span
-                  >ავტორი: <i class="fas fa-check-circle verified"></i> Giorgi
-                  M.</span
-                >
-              </div>
-            </div>
-          </article>
-          <article class="blog-post">
-            <div class="post-img"></div>
-            <div class="post-content">
-              <span class="post-date">10 თებერვალი, 2024</span>
-              <h4>მეღვინეობის 8000 წელი</h4>
-              <p>
-                ქვევრის ღვინის დაყენების ტექნოლოგია და მისი მნიშვნელობა
-                მსოფლიოსთვის.
-              </p>
-              <div class="post-footer">
-                <span
-                  >ავტორი: <i class="fas fa-check-circle verified"></i> Ana
-                  K.</span
-                >
-              </div>
-            </div>
-          </article>
+          <div class="blog-card">
+            <img
+              src="https://via.placeholder.com/400x300/4F4242/F2EBE5?text=ბლოგი+1"
+              alt="Blog"
+            />
+            <h4>ბედიას ბარძიმის საიდუმლო</h4>
+            <p>ოქროში ამოტვიფრული ეპოქა და დაკარგული ისტორია.</p>
+            <a href="#" class="read-more">ვრცლად</a>
+          </div>
+          <div class="blog-card">
+            <img
+              src="https://via.placeholder.com/400x300/4F4242/F2EBE5?text=ბლოგი+2"
+              alt="Blog"
+            />
+            <h4>იკორთას ჩუქურთმები</h4>
+            <p>ქვის პოეზია და ოსტატთა დავიწყებული სახელები.</p>
+            <a href="#" class="read-more">ვრცლად</a>
+          </div>
+          <div class="blog-card">
+            <img
+              src="https://via.placeholder.com/400x300/4F4242/F2EBE5?text=ბლოგი+3"
+              alt="Blog"
+            />
+            <h4>მოქვის სახარება</h4>
+            <p>ფერები და მინიატურები, რომლებმაც დროს გაუძლო.</p>
+            <a href="#" class="read-more">ვრცლად</a>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section class="contributors section-padding">
-      <div class="container contributor-box">
-        <h3>გაქვთ საინტერესო ისტორია?</h3>
-        <p>
-          Ornalith-ის პლატფორმაზე სტატიების გამოქვეყნება შეუძლიათ მხოლოდ
-          ვერიფიცირებულ ავტორებს. თუ თქვენ ხართ ისტორიკოსი, არქეოლოგი ან
-          მკვლევარი, გაიარეთ რეგისტრაცია.
-        </p>
-        <a href="#" class="btn-outline">ავტორიზაცია ავტორებისთვის</a>
-      </div>
-    </section>
-
-    <section class="faq section-padding" id="qa">
       <div class="container">
-        <h3 class="section-title center">ხშირად დასმული კითხვები</h3>
-        <div class="accordion">
-          <div class="accordion-item">
-            <button class="accordion-header">ვის შეუძლია ბლოგის დაწერა?</button>
-            <div class="accordion-content">
-              <p>
-                ბლოგის დაწერა შეუძლიათ მხოლოდ სერტიფიცირებულ მომხმარებლებს და
-                ექსპერტებს, რომლებიც გაივლიან სპეციალურ ვერიფიკაციას.
-              </p>
-            </div>
+        <div class="section-header" id="national-dishes">
+          <h2>ეროვნული კერძები</h2>
+        </div>
+        <div class="blog-grid">
+          <div class="blog-card">
+            <img
+              src="https://via.placeholder.com/400x300/4F4242/F2EBE5?text=ხაჭაპური"
+              alt="Khachapuri"
+            />
+            <h4>აჭარული ხაჭაპური</h4>
+            <p>
+              ცომის, ყველისა და კვერცხის იდეალური სინთეზი, რომელიც საქართველოს
+              კულინარიულ სიმბოლოდ იქცა.
+            </p>
+            <a href="#" class="read-more">ვრცლად</a>
           </div>
-          <div class="accordion-item">
-            <button class="accordion-header">
-              არის თუ არა მასალები ნამდვილი?
-            </button>
-            <div class="accordion-content">
-              <p>
-                დიახ, ყველა სტატია გადის მოდერაციას და ეფუძნება რეალურ ისტორიულ
-                წყაროებს.
-              </p>
-            </div>
+          <div class="blog-card">
+            <img
+              src="https://via.placeholder.com/400x300/4F4242/F2EBE5?text=ხინკალი"
+              alt="Khinkali"
+            />
+            <h4>მთიულური ხინკალი</h4>
+            <p>
+              ცომის მოხარშული ქისები ხორცის წვენით — უძველესი ტრადიცია საქართველოს
+              მთიანეთიდან.
+            </p>
+            <a href="#" class="read-more">ვრცლად</a>
           </div>
-          <div class="accordion-item">
-            <button class="accordion-header">როგორ გამოვიყენო API?</button>
-            <div class="accordion-content">
-              <p>
-                სამომავლოდ ჩვენს პლატფორმას დაემატება ღია API, რომლითაც შეძლებთ
-                კულტურული მონაცემების მიღებას.
-              </p>
-            </div>
+          <div class="blog-card">
+            <img
+              src="https://via.placeholder.com/400x300/4F4242/F2EBE5?text=ბადრიჯანი"
+              alt="Badrijani"
+            />
+            <h4>ნიგვზიანი ბადრიჯანი</h4>
+            <p>
+              შემწვარი ბადრიჯანი ნიგვზის, ნივრისა და ქართული სუნელების პიკანტური
+              შიგთავსით.
+            </p>
+            <a href="#" class="read-more">ვრცლად</a>
           </div>
         </div>
       </div>
-    </section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <h2>ORNALITH</h2>
-            <p>ვირტუალური მუზეუმი და ბლოგი.</p>
+      <section class="podcast-section" id="podcast">
+        <div class="container">
+          <div class="section-header">
+            <h2><i class="fas fa-headphones-alt"></i> ORNALITH პოდკასტი</h2>
           </div>
-          <div class="footer-links">
-            <h4>ნავიგაცია</h4>
-            <ul>
-              <li><a href="#">მთავარი</a></li>
-              <li><a href="#">კულტურა</a></li>
-              <li><a href="#">კონტაქტი</a></li>
-            </ul>
-          </div>
-          <div class="footer-social">
-            <h4>გამოგვყევით</h4>
-            <div class="social-icons">
-              <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <div class="podcast-card">
+            <i class="fas fa-play-circle play-btn"></i>
+            <div class="podcast-info">
+              <span
+                style="
+                  color: var(--clr-gold-1);
+                  font-family: var(--font-text-en);
+                "
+                >EPISODE 12</span
+              >
+              <h3>საუბრები ქვაზე და ლითონზე</h3>
+              <p style="color: var(--clr-br-4)">
+                სტუმარი: პროფესორი გიორგი მაკალათია
+              </p>
             </div>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2024 ORNALITH. ყველა უფლება დაცულია.</p>
+      </section>
+
+      <div class="container">
+        <div class="section-header" id="store">
+          <h2>მაღაზია</h2>
         </div>
+        <div class="store-grid">
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/300x400/D6D1D1/2E1F1E?text=ჟურნალი+N1"
+              alt="Product"
+            />
+            <h4>გამოცემა N1</h4>
+            <p class="product-price">₾ 25.00</p>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/300x400/D6D1D1/2E1F1E?text=ჩანთა"
+              alt="Product"
+            />
+            <h4>Tote Bag ლოგოთი</h4>
+            <p class="product-price">₾ 35.00</p>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/300x400/D6D1D1/2E1F1E?text=პოსტერი"
+              alt="Product"
+            />
+            <h4>იკორთას პოსტერი</h4>
+            <p class="product-price">₾ 15.00</p>
+          </div>
+          <div class="product-card">
+            <img
+              src="https://via.placeholder.com/300x400/D6D1D1/2E1F1E?text=ჟურნალი+N2"
+              alt="Product"
+            />
+            <h4>გამოცემა N2 (წინასწარი)</h4>
+            <p class="product-price">₾ 25.00</p>
+          </div>
+        </div>
+
+        <div class="section-header" id="events">
+          <h2>მომავალი ღონისძიებები</h2>
+        </div>
+        <div class="events-list">
+          <div class="event-item">
+            <div class="event-date">15 მარ.</div>
+            <div class="event-details">
+              <h4>საჯარო ლექცია: ოქრომჭედლობის საიდუმლოებები</h4>
+              <p style="color: var(--clr-br-3); font-size: 0.9rem">
+                <i class="fas fa-map-marker-alt"></i> თბილისის ისტორიის მუზეუმი
+              </p>
+            </div>
+            <a href="#" class="read-btn">ბილეთები</a>
+          </div>
+          <div class="event-item">
+            <div class="event-date">22 აპრ.</div>
+            <div class="event-details">
+              <h4>გამოფენა: დაკარგული ხელნაწერები</h4>
+              <p style="color: var(--clr-br-3); font-size: 0.9rem">
+                <i class="fas fa-map-marker-alt"></i> ეროვნული ბიბლიოთეკა
+              </p>
+            </div>
+            <a href="#" class="read-btn">დეტალები</a>
+          </div>
+        </div>
+
+        <section class="about-section" id="about">
+          <h2>ჩვენ შესახებ</h2>
+          <p>
+            ORNALITH არის დამოუკიდებელი პლატფორმა, რომელიც ეძღვნება საქართველოსა
+            და კავკასიის ისტორიული მემკვიდრეობის კვლევას. ჩვენი მიზანია,
+            წარსულის ფრაგმენტები ვაქციოთ ცოცხალ, თანამედროვე თხრობად და
+            შევინარჩუნოთ ისტორიული მეხსიერება მომავალი თაობებისთვის.
+          </p>
+        </section>
+      </div>
+
+      <div class="container">
+        <section class="donate-banner" id="donate">
+          <h2>მხარი დაუჭირეთ ჩვენს პროექტს</h2>
+          <p>
+            თქვენი შემოწირულობა გვეხმარება გავაგრძელოთ დამოუკიდებელი კვლევები და
+            გამოვცეთ ახალი ჟურნალები.
+          </p>
+          <a href="#" class="donate-btn-large">გაიღე დონაცია</a>
+        </section>
+      </div>
+    </main>
+
+    <section class="quote-section" id="api-quote-section">
+      <p class="quote-text" id="random-quote-text">
+        „რასაცა გასცემ შენია, რაც არა დაკარგულია.“
+      </p>
+      <p class="quote-author" id="random-quote-author">— შოთა რუსთაველი</p>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>კონტაქტი</h4>
+          <p>თბილისი, საქართველო</p>
+          <p>info@ornalith.ge</p>
+        </div>
+        <div class="footer-col">
+          <h4>ნავიგაცია</h4>
+          <ul>
+            <li><a href="#about">ჩვენ შესახებ</a></li>
+            <li><a href="#magazine">ჟურნალი</a></li>
+            <li><a href="#store">მაღაზია</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>გამოგვყევით</h4>
+          <div class="social-icons" style="font-size: 1.5rem; margin-top: 10px">
+            <i
+              class="fab fa-facebook-f"
+              style="margin-right: 15px; cursor: pointer"
+            ></i>
+            <i class="fab fa-instagram" style="cursor: pointer"></i>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ORNALITH. ყველა უფლება დაცულია.</p>
       </div>
     </footer>
-
-    <script src="assets/js/script.js"></script>
   </body>
 </html>
