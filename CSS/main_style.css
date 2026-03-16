@@ -589,3 +589,166 @@ img {
         grid-template-columns: 1fr;
     }
 }
+/* --- Single Article Styles --- */
+.single-article-container {
+    max-width: 800px; /* კითხვისთვის ოპტიმალური სიგანე */
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #f6f3eb; /* შენი საიტის კრემისფერი ფონი */
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.category-tag {
+    color: #5c2c22;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.article-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.article-meta {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.article-main-image img, 
+.article-inline-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-caption {
+    display: block;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.article-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.article-body h3 {
+    color: #5c2c22;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.lead-paragraph {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5c2c22;
+    margin-bottom: 30px;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+/* --- Single Article Styles (შესწორებული) --- */
+.single-article-container {
+    max-width: 800px; 
+    margin: 60px auto;
+    padding: 0 20px;
+    /* ფონს აღარ ვადებთ, რადგან body-ს უკვე აქვს var(--clr-paper) */
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.category-tag {
+    color: var(--clr-red-1);
+    font-family: var(--font-text-en);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.article-title {
+    font-family: var(--font-h-geo);
+    font-size: 2.5rem;
+    color: var(--clr-br-1);
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+.article-meta {
+    font-family: var(--font-text-geo);
+    font-size: 0.9rem;
+    color: var(--clr-br-3);
+}
+
+.article-meta .author {
+    color: var(--clr-red-1);
+    font-style: italic;
+}
+
+.article-main-image img, 
+.article-inline-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--clr-br-4); /* შენი სურათების სტილი */
+    margin-bottom: 10px;
+}
+
+.image-caption {
+    display: block;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--clr-br-3);
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.article-body {
+    font-family: var(--font-text-geo);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--clr-br-1);
+}
+
+.article-body h3 {
+    font-family: var(--font-h-geo);
+    color: var(--clr-red-1);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+.lead-paragraph {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--clr-red-2);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: var(--clr-br-5);
+    max-width: 1000px;
+    margin: 60px auto;
+}
